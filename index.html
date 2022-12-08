@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>생일축하해</title>
+    <!-- 파비콘생성 시작 -->
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
+    <!-- 파비콘생성 끝 -->
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/fullpage.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/slick.css">
+    <link rel="stylesheet" href="./css/shape.css">
+    <link rel="stylesheet" href="./css/sweetalert2.css">
+    <script type="text/javascript" src="./js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="./js/slick.js"></script>
+    <script type="text/javascript" src="./js/TweenMax.min.js"></script>
+    <script type="text/javascript" src="./js/sweetalert2.min.js"></script>
+
+</head>
+<body>
+    <div class="header">
+        <ul id="menu" >
+            <li><a data-menuanchor="0rdPage" href="#0rdPage">#인트로</a></li>
+            <li id="scrollPage"><a data-menuanchor="1rdPage" href="#1rdPage" >#사진</a></li>
+            <li><a data-menuanchor="2rdPage" href="#2rdPage">#선물</a></li>
+            <li><a data-menuanchor="3rdPage" href="#3rdPage">#편지</a></li>
+        </ul>
+    </div>
+    <div id="fullpage">
+        <div class="section" id="section0">
+            <div class="bg"><img src="./images/bg_section00.jpg" alt=""></div>
+            <div class="scroll-downs">
+                <div class="mousey">
+                    <div class="scroller"></div>
+                </div>
+            </div>
+        </div>
+        <div class="section" id="section1">
+            <div class="shape"></div>
+            <div class="section-wrap">
+                <div class="title-wrap">
+                    <p>추억 사진</p>
+                </div>
+                <div class="slick-wrap">
+                    <div class="slide-item">
+                        <img src="./images/test.png" alt="">
+                    </div>
+                    <div class="slide-item">
+                        <img src="./images/test.png" alt="">
+                    </div>
+                    <div class="slide-item">
+                        <img src="./images/test.png" alt="">
+                    </div>
+                    <div class="slide-item">
+                        <img src="./images/test.png" alt="">
+                    </div>
+                    <div class="slide-item">
+                        <img src="./images/test.png" alt="">
+                    </div>
+                    <div class="slide-item">
+                        <img src="./images/test.png" alt="">
+                    </div>
+                    <div class="slide-item">
+                        <img src="./images/test.png" alt="">
+                    </div>
+                    <div class="slide-item">
+                        <img src="./images/test.png" alt="">
+                    </div>
+                    <!-- <div class="slide-item">
+                        <img src="./images/slider_img01.jpg" alt="">
+                    </div>
+                    <div class="slide-item">
+                        <img src="./images/slider_img02.jpg" alt="">
+                    </div>
+                    <div class="slide-item">
+                        <img src="./images/slider_img03.jpg" alt="">
+                    </div>
+                    <div class="slide-item">
+                        <img src="./images/slider_img04.jpg" alt="">
+                    </div>
+                    <div class="slide-item">
+                        <img src="./images/slider_img05.jpg" alt="">
+                    </div>
+                    <div class="slide-item">
+                        <img src="./images/slider_img06.jpg" alt="">
+                    </div>
+                    <div class="slide-item">
+                        <img src="./images/slider_img07.jpg" alt="">
+                    </div>
+                    <div class="slide-item">
+                        <img src="./images/slider_img08.jpg" alt="">
+                    </div>
+                    <div class="slide-item">
+                        <img src="./images/slider_img09.jpg" alt="">
+                    </div>
+                    <div class="slide-item">
+                        <img src="./images/slider_img10.jpg" alt="">
+                    </div>
+                    <div class="slide-item">
+                        <img src="./images/slider_img11.jpg" alt="">
+                    </div>
+                    <div class="slide-item">
+                        <img src="./images/slider_img12.jpg" alt="">
+                    </div>
+                    <div class="slide-item">
+                        <img src="./images/slider_img13.jpg" alt="">
+                    </div>
+                    <div class="slide-item">
+                        <img src="./images/slider_img14.jpg" alt="">
+                    </div>
+                    <div class="slide-item">
+                        <img src="./images/slider_img15.jpg" alt="">
+                    </div>
+                    <div class="slide-item">
+                        <img src="./images/slider_img16.jpg" alt="">
+                    </div> -->
+                </div>
+                <div id="pager">
+                    <div class="prev">
+                        <span><img src="./images/icon_prev.png" alt="이전"></span>
+                    </div>
+                    <div class="img-number">
+                        <span class="page"></span><span class="among">/</span><span class="total"></span>
+                    </div>
+                    <div class="next">
+                      <span><img src="./images/icon_next.png" alt="다음"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section" id="section2">
+            <div class="shape"></div>
+            <div class="section-wrap">
+                <p class="title-wrap">생일은 역시 선물이죠!!</p>
+                <p class="title-wrap">*기회는 단 1번!!</p>
+                <div class="wrapper">
+                    <div class="pin"></div>
+                    <button type="button" class="btnStart">Start</button>
+                    <div class="circleWrap">
+                        <div class="rouleWrap">
+                        </div>
+                        <div class="dotWrap">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section" id="section3">
+            <p class="title-wrap">준비중!</p>
+        </div>
+    </div>    
+
+    <script type="text/javascript" src="./js/fullpage.js"></script>
+    <script type="text/javascript" src="./js/roulette.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            // 슬릭 슬라이더
+            var _totalPage = $('.slick-wrap .slide-item').length;
+            $('.img-number .page').text(1);
+			$('.img-number .total').text(_totalPage);
+			$('.slick-wrap').slick({
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				centerMode: true,
+				variableWidth: true,
+				focusOnSelect: true,
+                prevArrow: $('.prev'),
+                nextArrow: $('.next'),
+				responsive: [
+					{
+					breakpoint: 768,
+					settings: {
+						slidesToShow: 1,
+						slidesToScroll: 1,
+						centerMode: true,
+						variableWidth: false,
+						adaptiveHeight: true
+					}
+					}
+				]
+			});
+			$('.slick-wrap').on('afterChange', function(event, slick, currentSlide, nextSlide){
+				var _num = (currentSlide ? currentSlide : 0) + 1;
+				var _slidesToShow = slick.slickGetOption('slidesToShow');
+				var _curPage = parseInt((_num-1)/_slidesToShow) + 1;
+				var _totalPage =  parseInt((slick.slideCount-1)/_slidesToShow) + 1;
+				$('.img-number .page').text(_curPage);
+				$('.img-number .total').text(_totalPage);
+			});
+
+            // mouse-scroll-icon
+            $(document).on("click", ".scroll-downs", function(){
+                fullpage_api.moveTo('1rdPage');
+                console.log('click');
+            }); 
+            
+        });
+        
+        
+        
+        $(window).load(function(){
+            // 배경도형
+            var density = 10;
+            var shape = $(".shape"),
+                i, particle;
+            for (i = 0; i < density; i++) {
+                if(i%2){
+                    $("<div />", {id:"particle"+i}).addClass("layer1").appendTo(shape);
+                }else{
+                    $("<div />", {id:"particle"+i}).addClass("layer2").appendTo(shape);
+                }
+            }
+            var mouseX, mouseY, time1 = 1,time2 = 2, gap = 10;
+            $('body').on('mousemove',randomMove);
+            function randomMove(e){
+                if($(window).width() > 768){
+                    mouseX = e.pageX / gap;
+                    mouseY = e.pageY / gap;
+                    TweenLite.to(".layer1", time1, {x:mouseX,y:-mouseY,ease: Power4.easeOut}),
+                    TweenLite.to(".layer2", time2, {x:-mouseX,y:mouseY,ease: Power4.easeOut});
+                }
+            }
+
+            $(window).scroll(function () {
+                if($(window).width() < 768){
+                    TweenLite.to(".layer1", time1, {x:mouseX,y:-($(this).scrollTop() / 3),ease: Power4.easeOut});
+                    TweenLite.to(".layer2", time2, {x:-($(this).scrollTop() / 3),y:mouseY,ease: Power4.easeOut});
+
+                }
+            });
+        });
+
+        function popup_roulette(){
+            Swal.fire({
+                icon: 'warning',
+                title: '꽝!',
+                text: '아쉽지만 내년에 도전해 주세요.'
+            });
+        };
+
+        // 풀페이지 스크롤
+        var myFullpage = new fullpage('#fullpage', {
+            // sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff'],
+            // anchors: ['firstPage', 'secondPage', '3rdPage'],
+            navigation:true,
+            navigationTooltips: ['#인트로', '#사진', '#선물','#편지'],
+            showActiveTooltip: true,
+            // menu: '#menu'
+            // responsiveWidth: 768,
+            anchors: ['0rdPage', '1rdPage', '2rdPage', '3rdPage'],
+            menu: '#menu',
+        });
+    </script>
+</body>
+</html>
