@@ -12,9 +12,6 @@
 .header ul li a { display: block; text-align: center; width: 100%; height: 100%; line-height: 50px; font-size: 28px; color: #000; }
 .header ul li a.active { background: rgb(253, 148, 148); color: #fff; }
 
-/* disqus */
-#reactions__container, #footer { display: none !important; }
-
 
 /* section0 */
 #section0 .bg { position: absolute; width: 100%; height: 100%; left: 0; top: 0; z-index: -1; background: #4d2269; }
@@ -391,6 +388,10 @@
 .letter-box .txt { margin: 0 auto; width: 100%; max-width: 600px; background: url('../images/bg_letter2.jpg') no-repeat center; box-sizing: border-box; padding: 24px 16px; font-size: 24px; word-break: keep-all; }
 
 
+/* section4 */
+#section4 { background: #e6e6e6; }
+#disqus_thread { background: #fff; overflow-y: auto; border-radius: 10px; height: calc(100vh); max-height: calc(100vh - 240px); width: calc(100% - 140px); max-width: 950px; margin: 0 auto; box-sizing: border-box; border: 1px solid #000; }
+
 
 
 
@@ -426,6 +427,7 @@
   .wrapper .circleWrap .rouleWrap .item .bx { top: 34px; }
   .wrapper .circleWrap .rouleWrap .item .bx strong { font-size: 23px; }
   .wrapper .circleWrap .rouleWrap .item .bx span.txt { margin-bottom: 4px; font-size: 16px; }
+  #disqus_thread { width: 98%; }
 }
 
 
