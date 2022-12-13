@@ -12,6 +12,8 @@
 .header ul li a { display: block; text-align: center; width: 100%; height: 100%; line-height: 50px; font-size: 28px; color: #000; }
 .header ul li a.active { background: rgb(253, 148, 148); color: #fff; }
 
+/* disqus */
+#reactions__container, #footer { display: none !important; }
 
 
 /* section0 */
