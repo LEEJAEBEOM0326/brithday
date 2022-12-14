@@ -158,24 +158,42 @@
             </div>
         </div>
         <div class="section" id="section3">
-            <p class="title-wrap">To. 받는이</p>
-            <div class="letter-box">
-                <div class="txt">
-                    이곳은 편지 내용이 들어갈 부분 입니다.<br>
-                    이렇게 띄어 쓰기도 가능합니다.<br>
-                    이렇게 띄어 쓰기도 가능합니다.<br>
-                    이렇게 띄어 쓰기도 가능합니다.<br>
-                    이렇게 띄어 쓰기도 가능합니다.<br>
-                    이렇게 띄어 쓰기도 가능합니다.<br>
-                    이렇게 띄어 쓰기도 가능합니다.<br>
-                    이렇게 띄어 쓰기도 가능합니다.<br>
-                    이렇게 s띄어 쓰기도 가능합니다.<br>
-                    이렇게 띄어 쓰기도 가능합니다.<br>
+            <div class="letter-image">
+                <p class="title-wrap">편지를 열어 확인해 주세요.</p>
+                <div class="animated-mail">
+                    <div class="back-fold"></div>
+                    <div class="letter">
+                        <div class="letter-border"></div>
+                        <div class="letter-title"></div>
+                        <div class="letter-context"></div>
+                        <div class="letter-stamp">
+                            <div class="letter-stamp-inner"></div>
+                        </div>
+                    </div>
+                    <div class="top-fold"></div>
+                    <div class="body"></div>
+                    <div class="left-fold"></div>
+                </div>
+                <div class="shadow"></div>
+            </div>
+            <div class="letter-wrap">
+                <div class="letter-box">
+                    <div class="txt">
+                        To. ooo<br><br>
+                        생일 진심으로 축하해!! <br>
+                        오늘도, 앞으로도 쭉 oo의 생일은 내가 가장 먼저 축하해 줄거야.<br>
+                        <br>
+                        평소에 표한은 잘 못하는 남자친구지만, <br>
+                        항상 사랑으로 감싸주는 oo가 있어서 행복해.<br>
+                        앞으로 우리 행복하고 예쁘게 사랑하자.<br><br>
+                        <span>From. ooo</span>
+                        <button type="button"><img src="./images/btn_close.png" alt=""></button>
+                    </div>
                 </div>
             </div>
-            <p class="title-wrap">From. 이보내는이</p>
+            
         </div>
-        <div class="section" id="section4">
+        <!-- <div class="section" id="section4">
             <p class="title-wrap">축하해 주세요.</p>
             <div id="disqus_thread"></div>
             <script>
@@ -188,13 +206,13 @@
             </script>
             <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
             
-        </div>
+        </div> -->
     </div>   
     <script type="text/javascript" src="./js/fullpage.js"></script>
     <script type="text/javascript" src="./js/roulette.js"></script>
     <script type="text/javascript">
         $(document).ready(function(){
-            // 슬릭 슬라이더
+            // 사진 슬릭 슬라이더
             var _totalPage = $('.slick-wrap .slide-item').length;
             $('.img-number .page').text(1);
 			$('.img-number .total').text(_totalPage);
@@ -234,6 +252,20 @@
                 console.log('click');
             }); 
             
+            // 편지클릭 이벤트
+            $('.letter-image').click(function(){
+                setTimeout(function(){
+                    $('.letter-image').fadeOut(function(){
+                        $('.letter-wrap').fadeIn();
+                    });
+                    
+                },500);
+            });
+            $('.letter-box .txt button').click(function(){
+                $('.letter-wrap').fadeOut(function(){
+                    $('.letter-image').fadeIn();
+                });
+            });
         });
         
         
