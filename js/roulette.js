@@ -47,10 +47,14 @@ class Roulette {
 			// let randomNum = parseInt( Math.random() * this.opts.len );
             // 0번고정
 			let randomNum = 0;
+			// 쿠키생성
+			
 			if( this.ruleWrap.classList.contains('active') ){ 
 				alert('Reset!') 
 			} else {
 				this.move( randomNum ) ;
+				$.cookie('roulette', '1', { expires: 7, path: '/' });
+				console.log($.cookie('roulette'));
                 setTimeout(() => popup_roulette(), 10500);
 				$('.wrapper .btnStart').fadeOut();
 			}
