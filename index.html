@@ -257,7 +257,8 @@
             // mouse-scroll-icon
             $(document).on("click", ".scroll-downs", function(){
                 fullpage_api.moveTo('1rdPage');
-                console.log('click');
+                $('#container').addClass('active');
+                $('#sound').get(0).play();
             }); 
             
             // 편지클릭 이벤트
