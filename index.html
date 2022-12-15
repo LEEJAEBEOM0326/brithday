@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="./css/slick.css">
     <link rel="stylesheet" href="./css/shape.css">
     <link rel="stylesheet" href="./css/sweetalert2.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <script type="text/javascript" src="./js/jquery-1.11.3.min.js"></script>
     <script type="text/javascript" src="./js/slick.js"></script>
     <script type="text/javascript" src="./js/TweenMax.min.js"></script>
@@ -208,10 +209,17 @@
             
         </div> -->
     </div>   
+    <div class="footer">
+        <div id="container">
+            <div id="disc"></div>
+            <audio id="sound" src="./audio/bg.mp3" allow="autoplay" loop></audio>
+        </div>
+    </div>
     <script type="text/javascript" src="./js/fullpage.js"></script>
     <script type="text/javascript" src="./js/roulette.js"></script>
     <script type="text/javascript">
         $(document).ready(function(){
+            
             // 사진 슬릭 슬라이더
             var _totalPage = $('.slick-wrap .slide-item').length;
             $('.img-number .page').text(1);
@@ -265,6 +273,17 @@
                 $('.letter-wrap').fadeOut(function(){
                     $('.letter-image').fadeIn();
                 });
+            });
+
+            // 오디오클릭
+            $('#container').click(function(){
+                if ($(this).hasClass('active')) {
+                    $(this).removeClass('active');
+                    $('#sound').get(0).pause();
+                } else {
+                    $(this).addClass('active');
+                    $('#sound').get(0).play();
+                }
             });
         });
         
