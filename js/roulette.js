@@ -46,13 +46,14 @@ class Roulette {
             // 랜덤	
 			// let randomNum = parseInt( Math.random() * this.opts.len );
             // 0번고정
-			let randomNum = 5;
+			let randomNum = 0;
 			// 쿠키생성
-			$.cookie('roulette', '1', { expires: 7, path: '/' });
+			
 			if( this.ruleWrap.classList.contains('active') ){ 
-				alert('Reset!') 
+				// alert('Reset!') 
 			} else {
 				this.move( randomNum ) ;
+				$.cookie('roulette', '1', { expires: 7, path: '/' });
 				console.log($.cookie('roulette'));
                 setTimeout(() => popup_roulette(), 10500);
 				$('.wrapper .btnStart').fadeOut();
@@ -94,10 +95,14 @@ class Roulette {
 }
 
 let r = new Roulette;
+var rArray = [ '꽝', '핸드폰', '가방', '신발', '옷', '상품권', '꽝', '핸드폰', '가방', '신발', '옷', '상품권', '꽝', '핸드폰', '가방', '신발', '옷', '상품권' ];
+if($.cookie('roulette') == 1){
+	rArray = [ '상품권', '핸드폰', '가방', '신발', '옷', '꽝', '상품권', '핸드폰', '가방', '신발', '옷', '꽝', '상품권', '핸드폰', '가방', '신발', '옷', '꽝' ];
+}
 r.init( document.querySelector('.rouleWrap') , 
 		 { 
 			length : 6 , 
-		   itemTxt : [ '상품권', '핸드폰', '가방', '신발', '옷', '꽝', '상품권', '핸드폰', '가방', '신발', '옷', '꽝', '상품권', '핸드폰', '가방', '신발', '옷', '꽝' ] 
+		   itemTxt :  rArray
 		}
 ) ;
 
