@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <style>
         button { background: #fff; color: #000; }
         button.active, button:active { background: #000; color: #fff; }
@@ -21,16 +21,18 @@
         html += ' <button>버튼</button>';
 
         
-        $(document).ready(function(){
-            $('.btn_add').click(function(){
-                $('#add').append(html);
-            });
-        });
+        
         $(document).on('touchstart','button', function(){
             $(this).addClass('active');
         });
         $(document).on('touchend','button', function(){
             $(this).removeClass('active');
+        });
+
+        $(document).ready(function(){
+            $('.btn_add').click(function(){
+                $('#add').append(html);
+            });
         });
     </script>
 </body>
