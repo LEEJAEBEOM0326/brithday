@@ -12,16 +12,21 @@
     </style>
 </head>
 <body>
-    <button>1</button>
-    <button>2</button>
-    <button>3</button>
-    <button>4</button>
-    <button>5</button>
-    <button>6</button>
-    <button>7</button>
-    <button>8</button>
+    <a class="btn_add" href="#add">버튼추가</a>
+    <div id="add">
+        <button>버튼</button>
+    </div>
     <script>
-       $(document).on('touchstart','button', function(){
+        let html = "";
+        html += ' <button>버튼</button>';
+
+        
+        $(document).ready(function(){
+            $('.btn_add').click(function(){
+                $('#add').append(html);
+            });
+        });
+        $(document).on('touchstart','button', function(){
             $(this).addClass('active');
         });
         $(document).on('touchend','button', function(){
