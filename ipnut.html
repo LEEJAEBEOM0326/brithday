@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>oninput="this.value = this.value.replace(/[^(가-힣ㄱ-ㅎㅏ-ㅣㆍᆢa-zA-Z0-9\-)]/gi,'');"</p>
+    <input type="text" oninput="this.value = this.value.replace(/[^(가-힣ㄱ-ㅎㅏ-ㅣㆍᆢa-zA-Z0-9\-)]/gi,'');">
+    <br><br><br><br>
+    <p>oninput="this.value = this.value.replace(/[^a-z|A-Z|0-9|ㄱ-ㅎ|가-힣ㅣ\\u318D\\u119E\\u11A2\\u2022\\u2025a\\u00B7\\uFE55]/g, '').replace(/(\..*)\./g, '$1');"</p>
+    <input type="text" oninput="this.value = this.value.replace(/[^a-z|A-Z|0-9|ㄱ-ㅎ|가-힣ㅣ\\u318D\\u119E\\u11A2\\u2022\\u2025a\\u00B7\\uFE55]/g, '').replace(/(\..*)\./g, '$1');">
+    <br><br><br><br>
+    <p>oninput="this.value = this.value.replace(/[^(가-힣ㄱ-ㅎㅏ-ㅣㆍᆢa-zA-Z0-9\-)]/gi,'');"</p>
+    <input type="text" oninput="this.value = this.value.replace(/(?:[^\w\s\uAC00-\uD7A3\u3131-\u314E\u314F-\u3163\u318D\u119E\u11A2\u2022\u2025a\u00B7\uFE55]|_)+/g,'');">
+</body>
+</html>
