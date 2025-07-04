@@ -226,10 +226,25 @@
         </ul>
     </div>
     <!-- e: 네비게이션-->
+    <div id="popup">
+        <div id="popup-content">
+            <h2>당신은 남지연입니까?</h2>
+            <div class="btn-wrap">
+                <button id="yesBtn">맞다</button>
+                <button id="noBtn">아니다</button>
+            </div>
+
+            <div id="password-section">
+                <input type="password" id="passwordInput" placeholder="비밀번호 입력">
+                <button id="checkPasswordBtn">확인</button>
+                <div id="error"></div>
+            </div>
+        </div>
+    </div>
     <script type="text/javascript" src="./js/fullpage.js"></script>
     <script type="text/javascript" src="./js/roulette.js"></script>
     <script type="text/javascript">
-    $(document).ready(function(){
+        $(document).ready(function(){
             // 쿠키 확인
             if($.cookie('roulette') == 1){
                 $('.btnStart').hide();
@@ -238,51 +253,51 @@
             // 사진 슬릭 슬라이더
             var _totalPage = $('.slick-wrap .slide-item').length;
             $('.img-number .page').text(1);
-			$('.img-number .total').text(_totalPage);
-			$('.slick-wrap').slick({
-				slidesToShow: 1,
-				slidesToScroll: 1,
-				centerMode: true,
-				variableWidth: true,
-				focusOnSelect: true,
+            $('.img-number .total').text(_totalPage);
+            $('.slick-wrap').slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                centerMode: true,
+                variableWidth: true,
+                focusOnSelect: true,
                 prevArrow: $('.prev'),
                 nextArrow: $('.next'),
-				responsive: [
-					{
-					breakpoint: 768,
-					settings: {
-						slidesToShow: 1,
-						slidesToScroll: 1,
-						centerMode: true,
-						variableWidth: false,
-						adaptiveHeight: true
-					}
-					}
-				]
-			});
-			$('.slick-wrap').on('afterChange', function(event, slick, currentSlide, nextSlide){
-				var _num = (currentSlide ? currentSlide : 0) + 1;
-				var _slidesToShow = slick.slickGetOption('slidesToShow');
-				var _curPage = parseInt((_num-1)/_slidesToShow) + 1;
-				var _totalPage =  parseInt((slick.slideCount-1)/_slidesToShow) + 1;
-				$('.img-number .page').text(_curPage);
-				$('.img-number .total').text(_totalPage);
-			});
+                responsive: [
+                    {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        centerMode: true,
+                        variableWidth: false,
+                        adaptiveHeight: true
+                    }
+                    }
+                ]
+            });
+            $('.slick-wrap').on('afterChange', function(event, slick, currentSlide, nextSlide){
+                var _num = (currentSlide ? currentSlide : 0) + 1;
+                var _slidesToShow = slick.slickGetOption('slidesToShow');
+                var _curPage = parseInt((_num-1)/_slidesToShow) + 1;
+                var _totalPage =  parseInt((slick.slideCount-1)/_slidesToShow) + 1;
+                $('.img-number .page').text(_curPage);
+                $('.img-number .total').text(_totalPage);
+            });
 
             // mouse-scroll-icon
             $(document).on("click", ".scroll-downs", function(){
                 fullpage_api.moveTo('1rdPage');
                 $('#container').addClass('active');
                 $('#sound').get(0).play();
-            }); 
-            
+            });
+
             // 편지클릭 이벤트
             $('.letter-image').click(function(){
                 setTimeout(function(){
                     $('.letter-image').fadeOut(function(){
                         $('.letter-wrap').fadeIn();
                     });
-                    
+
                 },500);
             });
             $('.letter-box .txt button').click(function(){
@@ -301,10 +316,39 @@
                     $('#sound').get(0).play();
                 }
             });
+
+            const correctPassword = "0719"; // 원하는 비밀번호 설정
+            // 쿠키가 이미 있으면 팝업 숨기고 본문 보이기
+            if ($.cookie('namjieun') === 'true') {
+                $('#popup').hide();
+                $('#siteContent').show();
+            }
+
+            // '남지연 아님' 버튼 클릭 → 다른 사이트로 이동
+            $('#noBtn').on('click', function() {
+                window.location.href = "https://example.com"; // 이동할 주소로 변경
+            });
+
+            // '남지연' 버튼 클릭 → 비밀번호 입력창 표시
+            $('#yesBtn').on('click', function() {
+                $('#password-section').slideDown();
+            });
+
+            // 비밀번호 확인
+            $('#checkPasswordBtn').on('click', function() {
+                const input = $('#passwordInput').val();
+                if (input === correctPassword) {
+                    $.cookie('namjieun', 'true', { expires: 1 });
+                    $('#popup').fadeOut();
+                    $('#siteContent').fadeIn();
+                } else {
+                    $('#error').text('비밀번호가 틀렸습니다.');
+                }
+            });
         });
-        
-        
-        
+
+
+
         $(window).load(function(){
             // 배경도형
             var density = 10;
@@ -357,8 +401,6 @@
             anchors: ['0rdPage', '1rdPage', '2rdPage', '3rdPage'],
             menu: '#nav'
         });
-
-        
     </script>
 </body>
 </html>
