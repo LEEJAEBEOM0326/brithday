@@ -166,10 +166,10 @@
             <div class="letter-wrap">
                 <div class="letter-box">
                     <div class="txt">
-                        To. 개똥아<br><br>
+                        To. 지연아<br><br>
                         생일 진심으로 축하해!! <br>
-                        오늘은 너의 날이니까, 모든 걱정과 스트레스는 잠시 잊고 행복한 시간만 가득하기를 바래. <br>
-                        맛있는 것도 많이 먹고, 사랑하는 사람들과 즐거운 시간 보내! <br>
+                        오늘은 아무리 먹어도 0칼로리 <br>
+                        맛있는 것도 많이 먹고, 사랑하는 사람들과 즐거운 시간 보내자! <br>
                         앞으로도 우리 함께 멋진 추억 많이 만들어가자. <br>
                         다시 한번 생일 진심으로 축하해!<br><br>
                         <span>From. 재범</span>
@@ -200,10 +200,36 @@
             <audio id="sound" src="./audio/bg.mp3" allow="autoplay" loop></audio>
         </div>
     </div>
+    <!-- s: 네비게이션-->
+    <div id="nav" class="nav-wrap">
+        <ul class="list-wrap">
+            <li>
+                <a data-menuanchor="0rdPage" href="#0rdPage" class="btn-item">
+                    <img src="./images/icon_nav_home.png" alt="">
+                </a>
+            </li>
+            <li>
+                <a data-menuanchor="1rdPage" href="#1rdPage" class="btn-item">
+                    <img src="./images/icon_nav_photo.png" alt="">
+                </a>
+            </li>
+            <li>
+                <a data-menuanchor="2rdPage" href="#2rdPage" class="btn-item">
+                    <img src="./images/icon_nav_gift.png" alt="">
+                </a>
+            </li>
+            <li>
+                <a data-menuanchor="3rdPage" href="#3rdPage" class="btn-item">
+                    <img src="./images/icon_nav_letter.png" alt="">
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!-- e: 네비게이션-->
     <script type="text/javascript" src="./js/fullpage.js"></script>
     <script type="text/javascript" src="./js/roulette.js"></script>
     <script type="text/javascript">
-        $(document).ready(function(){
+    $(document).ready(function(){
             // 쿠키 확인
             if($.cookie('roulette') == 1){
                 $('.btnStart').hide();
@@ -329,7 +355,7 @@
             // menu: '#menu'
             // responsiveWidth: 768,
             anchors: ['0rdPage', '1rdPage', '2rdPage', '3rdPage'],
-            menu: '#menu',
+            menu: '#nav'
         });
 
         
