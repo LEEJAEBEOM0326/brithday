@@ -927,9 +927,6 @@ audio { display: none; }
   #container:before { line-height: 50px; }
   #disc { width: 45px; height: 45px; }
   #container.active #disc { left: 46px; }
-  .letter-box .txt br {
-    display: none;
-  }
 }
 
 @media screen and (max-width: 680px) {
