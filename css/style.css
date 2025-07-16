@@ -939,6 +939,10 @@ audio { display: none; }
   
   .wrapper .circleWrap .rouleWrap .item .bx { top: 40px; }
   .wrapper .circleWrap .rouleWrap .item .bx span.txt { font-size: 1em; }
+
+  .letter-box .txt {
+    font-size: 18px;
+  }
 }
 
 @media screen and (max-width: 480px) {
